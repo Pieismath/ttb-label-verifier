@@ -113,10 +113,11 @@ src/
 │   ├── BeverageTypeSelector.tsx
 │   ├── ApplicationDataForm.tsx
 │   ├── ImageUploader.tsx
-│   ├── VerificationResult.tsx
+│   ├── VerificationResult.tsx  # Side-by-side view, print, AI details
 │   ├── ComparisonDetail.tsx
 │   ├── GovernmentWarningCheck.tsx
-│   ├── BatchResultsTable.tsx
+│   ├── BatchResultsTable.tsx   # CSV export, progress tracking
+│   ├── VerificationHistory.tsx # Past verifications with summary stats
 │   └── FieldMatchIndicator.tsx
 ├── lib/
 │   ├── types.ts              # All TypeScript interfaces
@@ -128,8 +129,9 @@ src/
 │   ├── field-requirements.ts # Per-beverage-type configs
 │   └── image-utils.ts        # Client-side image handling
 └── hooks/
-    ├── useVerification.ts    # Single-label hook
-    └── useBatchVerification.ts # Batch processing hook
+    ├── useVerification.ts      # Single-label hook
+    ├── useBatchVerification.ts # Batch processing hook
+    └── useVerificationHistory.ts # localStorage history persistence
 ```
 
 ## Assumptions & Trade-offs
