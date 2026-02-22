@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { extractLabelData, ImageMediaType } from "@/lib/anthropic";
 
+export const maxDuration = 60;
+
 export async function POST(request: NextRequest) {
   try {
     const { imageBase64, mediaType } = await request.json();
